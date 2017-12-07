@@ -4,7 +4,7 @@ var app = express()
 var result = "";
 
 app.use(express.static(__dirname + '/public'))
-var uristring = 'mongodb://localhost/local';
+var uristring = 'mongodb://mongo/local';
 
 app.get('/', function(request, response) {
   response.send(result);
