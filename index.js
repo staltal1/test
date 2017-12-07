@@ -21,8 +21,8 @@ app.listen(app.get('port'), function() {
 // operations and release them when the connection is complete.
 mongoose.connect(uristring, function (err, res) {
   if (err) {
-  result = "error"; 
+  result = "1error"; 
   } else {
-  result = "good";
+  result = "1good";
   }
 });
