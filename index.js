@@ -2,7 +2,7 @@ var express = require('express')
 var mongoose = require('mongoose');
 var app = express()
 var result = "";
-
+app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 var uristring = 'mongodb://db/local';
 
