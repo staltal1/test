@@ -2,9 +2,9 @@ var express = require('express')
 var mongoose = require('mongoose');
 var app = express()
 var result = "";
-app.set('port', (process.env.PORT || 5000))
+
 app.use(express.static(__dirname + '/public'))
-var uristring = 'mongodb://localhost';
+var uristring = 'mongodb://localhost/local';
 
 app.get('/', function(request, response) {
   response.send(result);
@@ -21,8 +21,8 @@ app.listen(app.get('port'), function() {
 // operations and release them when the connection is complete.
 mongoose.connect(uristring, function (err, res) {
   if (err) {
-  result = "1error"; 
+  result = "21error"; 
   } else {
-  result = "1good";
+  result = "21good";
   }
 });
